@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    text-align: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20rem;
+    padding: 16px;
+    width: 100%;
+}
+
+.card-1 {
+    width: 25%;
+    background-color: hsl(31, 77%, 52%);
+    min-height: 65vh;
+    display: grid;
+    grid-template-rows: 5vh 10vh 25vh 5vh;
+    gap: 2rem;
+    grid-template-areas: "img" "h1" "p" "btn";
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    -ms-border-radius: 10px 0 0 10px;
+    -o-border-radius: 10px 0 0 10px;
+}
+
+.card-2 {
+    width: 25%;
+    background-color: hsl(184, 100%, 22%);
+    min-height: 65vh;
+    display: grid;
+    grid-template-rows: 5vh 10vh 25vh 5vh;
+    gap: 2rem;
+    grid-template-areas: "img" "h1" "p" "btn";
+}
+
+.card-3 {
+    width: 25%;
+    background-color: hsl(179, 100%, 13%);
+    min-height: 65vh;
+    display: grid;
+    grid-template-rows: 5vh 10vh 25vh 5vh;
+    gap: 2rem;
+    grid-template-areas: "img" "h1" "p" "btn";
+    border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+}
+
+img{
+    grid-area: img;
+    padding: 20px;
+}
+
+h1 {
+    grid-area: h1;
+    color: hsl(0, 0%, 95%);
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    font-size: 41px;
+}
+
+p {
+    grid-area: p;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.btn {
+    text-align: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+button {
+    height: 5vh;
+    grid-area: btn;
+    background-color: white;
+    border: none;
+    width: 30%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.card-1 .btn button {
+    color: hsl(31, 77%, 52%);
+}
+
+.card-2 .btn button {
+    color: hsl(184, 100%, 22%);
+}
+
+.card-3 .btn button {
+    color: hsl(179, 100%, 13%);
+}
+
+
+
+.btn button:hover {
+    color: white;
+    background-color: hsla(0, 0%, 0%, 0);
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+@media (min-width:300px) and (max-width:899px) {
+    .container {
+        flex-direction: column;
+    }
+    .card-1,
+    .card-2,
+    .card-3 {
+        width: 85%;
+    }
+    .card-1 {
+        border-radius: 10px 10px 0 0;
+        -webkit-border-radius: 10px 10px 0 0;
+        -moz-border-radius: 10px 10px 0 0;
+        -ms-border-radius: 10px 10px 0 0;
+        -o-border-radius: 10px 10px 0 0;
+    }
+
+    .card-3 {
+        border-radius: 0 0 10px 10px;
+        -webkit-border-radius: 0 0 10px 10px;
+        -moz-border-radius: 0 0 10px 10px;
+        -ms-border-radius: 0 0 10px 10px;
+        -o-border-radius: 0 0 10px 10px;
+}
+}
+
+@media (min-width: 900px) and (max-width:1050px){
+    .card-1,
+    .card-2,
+    .card-3 {
+        width: 30%;
+    }
+
+    .btn .button {
+        width: 45%;
+    }
+}
